@@ -1,0 +1,532 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #061b28;
+    color: white;
+    overflow: hidden;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #176B73;
+    z-index: 9999;
+}
+
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 35px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
+
+/* =========================
+   Download CV Button
+========================= */
+
+.cv-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #00ffff;
+    color: #061b28;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    background: white;
+    box-shadow: 0 0 20px #00ffff;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+#home {
+    display: flex;
+}
+
+section:target {
+    display: flex;
+}
+
+
+/* =========================
+   Home Section
+========================= */
+
+.home {
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8% 0;
+}
+
+.content {
+    width: 50%;
+}
+
+.content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content h2 span {
+    color: #00ffff;
+}
+
+.content p {
+    width: 550px;
+    line-height: 1.6;
+    color: #ddd;
+    font-size: 16px;
+}
+
+
+/* Home Image */
+
+.image-box {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    padding: 8px;
+    border: 4px solid #00ffff;
+
+    box-shadow:
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 80px #00ffff;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* =========================
+   About Section
+========================= */
+
+.about {
+    align-items: center;
+    justify-content: center;
+    padding: 100px 10% 60px;
+}
+
+.about-content {
+    width: 60%;
+    max-width: 900px;
+    text-align: left;
+}
+
+.about-content h1 {
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+.about-content h1 span {
+    color: #00ffff;
+}
+
+.about-content p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.about-content h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* About Image */
+
+.about-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 280px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #00ffff;
+}
+
+
+/* =========================
+   Education Section
+========================= */
+
+.education {
+    align-items: center;
+    justify-content: center;
+    padding: 100px 8% 40px;
+}
+
+.education-content {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.education-content h1 {
+    font-size: 55px;
+    margin-bottom: 55px;
+}
+
+.education-content h1 span {
+    color: #00ffff;
+}
+
+.education-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.education-box {
+    flex: 1;
+    min-height: 260px;
+    padding: 35px 25px;
+    border-left: 4px solid #00ffff;
+    border-radius: 12px;
+    background: #082331;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.education-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.education-box h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.education-box h3 {
+    font-size: 18px;
+    color: #00ffff;
+    margin-bottom: 25px;
+}
+
+.education-box p {
+    color: #ddd;
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+
+/* CGPA / Percentage Highlight */
+
+.education-box p:last-child {
+    color: #00ffff;
+    font-weight: bold;
+}
+
+.education-box p:last-child {
+    color: white;
+    font-weight: 500;
+}
+
+
+/* =========================
+   Skills Section
+========================= */
+
+.skills {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 120px 8% 40px;
+}
+
+.skills-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.skills-content h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.skills-content h1 span {
+    color: #00ffff;
+}
+
+.skills-content > p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-box {
+    padding: 20px;
+    border: 1px solid #00ffff;
+    border-radius: 15px;
+    background: #082331;
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.skill-box h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.skill-box p {
+    color: #ddd;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Projects Section
+========================= */
+
+.projects {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 120px 8% 40px;
+}
+
+.projects-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.projects-content h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.projects-content h1 span {
+    color: #00ffff;
+}
+
+.projects-content > p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-box {
+    padding: 30px 25px;
+    border: 1px solid #00ffff;
+    border-radius: 15px;
+    background: #082331;
+    transition: 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.project-box h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.project-box p {
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* =========================
+   Contact Section
+========================= */
+
+.contact {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 8% 80px;
+}
+
+.contact-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-content h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.contact-content h1 span {
+    color: #00ffff;
+}
+
+.contact-content > p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    text-shadow: 0 0 10px #00ffff;
+}
+
+
+/* =========================
+   Footer - Contact Only
+========================= */
+
+.contact footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #176B73;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #00ffff;
+}
+
+.contact footer p {
+    color: white;
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+.contact footer span {
+    color: #00ffff;
+    font-weight: bold;
+}
+.skill-box h3,
+.project-box h3 {
+    color: #00ffff;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
